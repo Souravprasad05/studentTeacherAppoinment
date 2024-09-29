@@ -1,0 +1,100 @@
+/* Existing styles remain unchanged */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.mainContainer {
+    background-color: #F3F4F6;
+    height: auto; /* Changed to auto to accommodate content height */
+    min-height: 100vh; /* Ensures it takes full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px; /* Add padding for better spacing */
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 500;
+}
+
+.mainCard {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto; /* Allow height to adjust */
+}
+
+.card {
+    background-color: #FFF;
+    width: 300px; /* Fixed width to maintain uniformity */
+    height: 100%; /* Fixed height for uniformity */
+    color: rgb(162, 128, 6);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.288);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.card h2 {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.image {
+    width: 80%;
+    height: auto; /* This ensures the image maintains its aspect ratio */
+}
+
+.button {
+    width: 50%;
+    height: 45px; /* Set a fixed height for the buttons */
+    cursor: pointer;
+    background-color: #337ae3;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    margin-bottom: 20px; /* Added margin to create space after the button */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .mainCard {
+        flex-direction: column; /* Stack cards vertically */
+    }
+
+    .card {
+        width: 90%; /* Use a percentage for responsiveness */
+        max-width: 300px; /* Keep a max width for larger screens */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em; /* Further adjust font size for very small screens */
+    }
+
+    .button {
+        font-size: 1em; /* Adjust button font size */
+    }
+}

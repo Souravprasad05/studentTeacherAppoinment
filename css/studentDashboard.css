@@ -1,0 +1,148 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px; /* Add some horizontal padding for breathing room */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Ensure space between the left and right content */
+    align-items: center; /* Vertically align items in the middle */
+    max-width: 1200px; /* Set a max width for the header content */
+    margin: 0 auto; /* Center the content horizontally */
+}
+
+.header-left {
+    font-size: 18px; /* Set the font size for better visibility */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-content {
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* Add some padding to the header */
+}
+
+.logout-button {
+    width: 90px;
+    background: transparent;
+    border: 2px solid white;
+    padding: 5px 15px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px; /* Slight rounding for the button */
+    transition: background 0.3s ease; /* Smooth transition on hover */
+}
+
+.logout-button:hover {
+    background-color: white; /* Change background on hover */
+    color: #4CAF50; /* Invert the colors on hover */
+}
+
+
+
+.dashboard-title {
+    padding-top: 60px;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.alert-box {
+    background-color: #FF9800;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    display: block; 
+}
+
+
+#teachers-section {
+    padding: 20px;
+    padding-top: 0;
+}
+
+.teacher-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.teacher-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    width: 250px;
+}
+
+.teacher-card img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button {
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 80%; /* Increased width for both buttons */
+}
+
+button.book-appointment {
+    background-color: #4CAF50; /* Green background for the Book Appointment button */
+}
+
+button.message-teacher {
+    background-color: #2196F3; /* Blue background for the Message Teacher button */
+    cursor: no-drop;
+}
+
+button:hover {
+    opacity: 0.9; /* Slight opacity change on hover for better feedback */
+}
+
+
+#appointments-section {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}

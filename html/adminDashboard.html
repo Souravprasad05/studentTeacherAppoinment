@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/adminDashboard.css">
+    <link rel="icon" href="/images/dashboardIcon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-left">Welcome Admin</div>
+        <div class="header-right">
+            <button class="logout-button">Logout</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Custom Alert Box -->
+        <div id="alert-box" class="alert-box">Logged in successfully!</div>
+
+        <!-- Admin Dashboard Title -->
+        <div class="dashboard-title">
+            <h1>Admin Dashboard</h1>
+        </div>
+
+        <!-- Status Section -->
+        <section id="status-section">
+            <h2>Status</h2>
+            <p id="teacher-count">Total Teachers: 0</p>
+            <button id="add-teacher-btn" class="styled-btn">Add Teacher</button>
+        </section>
+
+        <!-- Modal for Adding Teachers -->
+        <div id="add-teacher-modal" class="modal">
+            <div class="modal-content">
+                <h2>Add Teacher</h2>
+                <form id="add-teacher-form">
+                    <input type="text" placeholder="Name" required id="techerName">
+                    <input type="text" placeholder="Subject" required id="teacherSubject">
+                    <input type="number" placeholder="Age" required id="teacherAge">
+                    <input type="text" placeholder="Contact Number" required id="teacherNumber">
+                    <input type="email" placeholder="Email" required id="teacherEmail">
+                    <input type="password" placeholder="Password" required id="teacherPassword">
+                    <input type="password" placeholder="Verify Password" required>
+                    <div class="modal-btns">
+                        <button type="button" id="close-modal">Close</button>
+                        <button type="submit" id="submit-teacher" class="styled-btn">Add Teacher</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Teachers Table Section -->
+        <section id="teachers-section">
+            <h2>Teachers</h2>
+            <table id="teachers-list">
+                <thead>
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Name</th>
+                        <th>Subject</th>
+                        <th>Contact</th>
+                        <th>Email</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="teachers-table-body">
+                    <tr id="no-teachers-msg">
+                        <td colspan="6">No Teachers!</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Students Table Section -->
+        <section id="students-section">
+            <h2>Students</h2>
+            <table id="students-list">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="students-table-body">
+                    <tr id="no-students-msg">
+                        <td colspan="5">No Students!</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Approve/Reject Section -->
+        <section id="approve-reject-section">
+            <h2>Approve/Reject Student Registration</h2>
+            <div class="request-container" id="request-container">
+                <!-- Dynamic requests will be inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/adminDashboard.js" type="module"></script>
+</body>
+</html>

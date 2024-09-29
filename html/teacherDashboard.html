@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="/css/teacherDashboard.css">
+    <link rel="icon" href="/images/dashboardIcon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-left">Welcome <span id="teacherName">Teacher</span></div>
+        <div class="header-right">
+            <button class="logout-button">Logout</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Custom Alert Box -->
+        <div id="alert-box" class="alert-box">Logged in successfully!</div>
+
+        <!-- Teacher Dashboard Title -->
+        <div class="dashboard-title">
+            <h1>Teacher Dashboard</h1>
+        </div>
+
+        <!-- Status Section -->
+        <section id="status-section">
+            <h2 style="text-align: left;">Status</h2>
+            <p id="appointment-count">Scheduled Appointments: 0</p>
+            <button id="schedule-appointment-btn">Schedule Appointment</button>
+        </section>
+
+        <!-- Modal for Scheduling Appointments -->
+        <div id="schedule-modal" class="modal">
+            <div class="modal-content">
+                <h2>Schedule an Appointment</h2>
+                <p>Select a time slot:</p>
+                <div class="time-slots">
+                    <label>
+                        <input type="radio" name="time-slot" value="2pm-3pm"> 2 PM - 3 PM
+                    </label>
+                    <label>
+                        <input type="radio" name="time-slot" value="4pm-5pm"> 4 PM - 5 PM
+                    </label>
+                    <label>
+                        <input type="radio" name="time-slot" value="6pm-7pm"> 6 PM - 7 PM
+                    </label>
+                </div>
+                <button id="close-modal">Close</button>
+                <button id="submit-appointment">Submit</button>
+            </div>
+        </div>
+
+        <!-- Upcoming Appointments Section -->
+        <section id="appointments-section">
+            <h2>Your All Upcoming Appointments</h2>
+            <table id="appointments-list">
+                <thead>
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Subject</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="appointment-table-body">
+                    <tr id="no-appointments-msg">
+                        <td colspan="5">No Appointments!</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Approve/Reject Appointments Section -->
+        <section id="approve-reject-section">
+            <h2>Approve/Reject Appointments</h2>
+            <div class="request-container" id="request-container">
+                <!-- Dynamic requests will be inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/teacherDashboard.js" type="module"></script>
+</body>
+
+</html>

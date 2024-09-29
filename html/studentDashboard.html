@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="/css/studentDashboard.css">
+    <link rel="icon" href="/images/dashboardIcon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header> 
+        <div class="header-content">
+            <div class="header-left">Welcome <span id="studentName">Student</span></div>
+            <div class="header-right">
+                <button class="logout-button" id="logoutBtn">Logout</button>
+            </div>
+        </div>
+    </header>
+    
+    <div class="dashboard-title">
+        <h1>Student Dashboard</h1>
+    </div>
+
+    <!-- Custom Alert Box -->
+    <div id="alert-box" class="alert-box">Logged in successfully!</div>
+
+    <!-- Teachers Section -->
+    <section id="teachers-section">
+        <h2>Available Teachers</h2>
+        <div class="teacher-container">
+            <!-- Teacher 1 -->
+            <div class="teacher-card" data-teacher-id="1" data-subject-id="101" data-availability-id="available" data-time-id="10-11am">
+                <img src="/images/teacherImage.jpg" alt="Teacher Image">
+                <h3 id="teacher-1-name">Mrs. Manvi Walia</h3>
+                <p id="teacher-1-subject">Subject: Coordinator</p>
+                <p id="teacher-1-contact">Contact: 123-456-7890</p>
+                <p id="teacher-1-availability">Availability: Yes</p>
+                <p id="teacher-1-timeSlot">Time: 10:00 AM - 11:00 AM</p>
+                <button class="book-appointment" id="teacher-1-book">Book Appointment</button>
+                <button class="message-teacher">Message Teacher</button>
+            </div>
+
+            <!-- Teacher 2 -->
+            <div class="teacher-card" data-teacher-id="2" data-subject-id="102" data-availability-id="available" data-time-id="2-3pm">
+                <img src="/images/teacherImage.jpg" alt="Teacher Image">
+                <h3 id="teacher-2-name">Mr. Himanshu Tyagi</h3>
+                <p id="teacher-2-subject">Subject: Tech Lead</p>
+                <p id="teacher-2-contact">Contact: 987-654-3210</p>
+                <p id="teacher-2-availability">Availability: Yes</p>
+                <p id="teacher-2-timeSlot">Time: 2:00 PM - 3:00 PM</p>
+                <button class="book-appointment" id="teacher-2-book">Book Appointment</button>
+                <button class="message-teacher">Message Teacher</button>
+            </div>
+
+    </section>
+
+    <!-- Appointments Section -->
+    <section id="appointments-section">
+        <h2>Your Appointments</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sr No.</th>
+                    <th>Teacher</th>
+                    <th>Subject</th>
+                    <th>Date</th>
+                    <th>Time Slot</th>
+                </tr>
+            </thead>
+            <tbody id="appointments-list">
+                <tr id="no-appointments-msg">
+                    <td colspan="5">No Appointments!</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <script src="/js/studentDashboard.js" type="module"></script>
+</body>
+</html>
